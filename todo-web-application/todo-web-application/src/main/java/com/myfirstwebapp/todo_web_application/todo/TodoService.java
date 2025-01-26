@@ -13,4 +13,7 @@ public class TodoService {
         todos.add(new Todo(3,"Arunesh","learn Spring Boot",
                 LocalDate.now().plusYears(3),false));
     }
+    private List<Todo> findByUsername(String username){
+        return todos;
+    }
 }
