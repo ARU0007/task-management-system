@@ -3,6 +3,6 @@
 </head>
 <body>
 <%--Expression Language ${name}  --%>
-<h1>logging to jsp! Welcome ${name}</h1>
+<h1>logging to jsp! Welcome </h1>
 </body>
 </html>
