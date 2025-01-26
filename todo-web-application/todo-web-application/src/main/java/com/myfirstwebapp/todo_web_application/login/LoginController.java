@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
+    public LoginController(AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
+    }
 
+    private AuthenticationService authenticationService;
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public String gotoLoginPage() {
         return "login";
@@ -17,9 +21,12 @@ public class LoginController {
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String gotoWelcomePage(@RequestParam String name, @RequestParam String password, ModelMap model) {
-        model.put("name", name);
-        model.put("password", password);
-        return "welcome";
+        if (authenticationService.authentication(name, password)) {
+            model.put("name", name);
+            model.put("password", password);
+            return "welcome";
+        }
+        return "login";
     }
 }
 // http://localhost:8080/login?name=John
