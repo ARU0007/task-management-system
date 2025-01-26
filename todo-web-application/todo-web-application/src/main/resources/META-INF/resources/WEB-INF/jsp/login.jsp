@@ -2,6 +2,7 @@
 <head><title>Hello World!</title>
 </head>
 <body>
-<h1>logging to jsp!</h1>
+<%--Expression Language ${name}  --%>
+<h1>logging to jsp! Welcome ${name}</h1>
 </body>
 </html>
