@@ -1,10 +1,13 @@
 package com.myfirstwebapp.todo_web_application.todo;
 
-import java.time.LocalDate;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+@Service
 public class TodoService {
-    private static List<Todo> todos;
+    private static List<Todo> todos = new ArrayList<>();
     static{
         todos.add(new Todo(1,"Arunesh","learn Spring MVC",
                 LocalDate.now().plusYears(1),false));
@@ -13,7 +16,7 @@ public class TodoService {
         todos.add(new Todo(3,"Arunesh","learn Spring Boot",
                 LocalDate.now().plusYears(3),false));
     }
-    private List<Todo> findByUsername(String username){
+    List<Todo> findByUsername(String username){
         return todos;
     }
 }
