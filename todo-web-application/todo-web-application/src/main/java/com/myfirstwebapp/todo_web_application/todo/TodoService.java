@@ -8,15 +8,21 @@ import java.util.List;
 @Service
 public class TodoService {
     private static List<Todo> todos = new ArrayList<>();
+    private static int todosCount = 0;
+
     static{
-        todos.add(new Todo(1,"Arunesh","learn Spring MVC",
+        todos.add(new Todo(++todosCount,"Arunesh","learn Spring MVC",
                 LocalDate.now().plusYears(1),false));
-        todos.add(new Todo(2,"Arunesh","learn Spring Security",
+        todos.add(new Todo(++todosCount,"Arunesh","learn Spring Security",
                 LocalDate.now().plusYears(2),false));
-        todos.add(new Todo(3,"Arunesh","learn Spring Boot",
+        todos.add(new Todo(++todosCount,"Arunesh","learn Spring Boot",
                 LocalDate.now().plusYears(3),false));
     }
     List<Todo> findByUsername(String username){
         return todos;
+    }
+    public void addTodo(String username, String description, LocalDate targetDate, boolean isDone) {
+        Todo todo =new Todo(++todosCount,username,description,targetDate,isDone);
+        todos.add(todo);
     }
 }
