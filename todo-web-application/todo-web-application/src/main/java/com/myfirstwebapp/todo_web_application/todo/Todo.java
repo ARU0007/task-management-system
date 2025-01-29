@@ -14,19 +14,20 @@ public class Todo {
     private String username;
     private String description;
     private LocalDate targetDate;
-    private boolean isDone;
+    private boolean done;
 
-    public Todo(int id, String username, String description, LocalDate targetDate, boolean isDone) {
+    public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
+        super();
         this.id = id;
         this.username = username;
         this.description = description;
         this.targetDate = targetDate;
-        this.isDone = isDone;
+        this.done = done;
     }
 
     @Override
     public String toString() {
-        return "Todo{" + "id=" + id + ", username='" + username + '\'' + ", description='" + description + '\'' + ", targetDate=" + targetDate + ", isDone=" + isDone + '}';
+        return "Todo{" + "id=" + id + ", username='" + username + '\'' + ", description='" + description + '\'' + ", targetDate=" + targetDate + ", isDone=" + done + '}';
     }
 
     public int getId() {
@@ -62,10 +63,10 @@ public class Todo {
     }
 
     public boolean isDone() {
-        return isDone;
+        return done;
     }
 
     public void setDone(boolean done) {
-        isDone = done;
+        this.done = done;
     }
 }
