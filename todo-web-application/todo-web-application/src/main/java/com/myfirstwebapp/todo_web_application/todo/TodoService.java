@@ -21,8 +21,8 @@ public class TodoService {
     List<Todo> findByUsername(String username){
         return todos;
     }
-    public void addTodo(String username, String description, LocalDate targetDate, boolean isDone) {
-        Todo todo =new Todo(++todosCount,username,description,targetDate,isDone);
+    public void addTodo(String username, String description, LocalDate targetDate, boolean done) {
+        Todo todo =new Todo(++todosCount,username,description,targetDate,done);
         todos.add(todo);
     }
 }
