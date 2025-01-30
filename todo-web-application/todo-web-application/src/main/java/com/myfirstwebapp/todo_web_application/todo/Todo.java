@@ -1,5 +1,7 @@
 package com.myfirstwebapp.todo_web_application.todo;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 //Database(MySQL)
@@ -12,6 +14,7 @@ public class Todo {
 //    done
     private int id;
     private String username;
+    @Size(min = 10, message = "Description should be minimum of 10 characters")
     private String description;
     private LocalDate targetDate;
     private boolean done;
