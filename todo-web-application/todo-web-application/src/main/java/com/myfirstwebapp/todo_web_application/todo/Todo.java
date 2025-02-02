@@ -1,17 +1,24 @@
 package com.myfirstwebapp.todo_web_application.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
 //Database(MySQL)
 //Static List of todos => Database(H2, MySQL)
+@Entity
 public class Todo {
     //    id
 //    username
 //    description
 //    targetDate
 //    done
+
+    @Id
+    @GeneratedValue
     private int id;
     private String username;
     @Size(min = 10, message = "Description should be minimum of 10 characters")
@@ -26,6 +33,10 @@ public class Todo {
         this.description = description;
         this.targetDate = targetDate;
         this.done = done;
+    }
+
+    public Todo() {
+
     }
 
     @Override
