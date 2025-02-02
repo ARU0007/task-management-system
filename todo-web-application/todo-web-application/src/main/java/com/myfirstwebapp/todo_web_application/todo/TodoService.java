@@ -14,9 +14,9 @@ public class TodoService {
     private static int todosCount = 0;
 
     static {
-        todos.add(new Todo(++todosCount, "Arunesh", "learn Spring MVC", LocalDate.now().plusYears(1), false));
-        todos.add(new Todo(++todosCount, "Arunesh", "learn Spring Security", LocalDate.now().plusYears(2), false));
-        todos.add(new Todo(++todosCount, "Arunesh", "learn Spring Boot", LocalDate.now().plusYears(3), false));
+        todos.add(new Todo(++todosCount, "in28minutes", "learn Spring MVC 1", LocalDate.now().plusYears(1), false));
+        todos.add(new Todo(++todosCount, "in28minutes", "learn Spring Security 1", LocalDate.now().plusYears(2), false));
+        todos.add(new Todo(++todosCount, "in28minutes", "learn Spring Boot 1", LocalDate.now().plusYears(3), false));
     }
 
     List<Todo> findByUsername(String username) {
