@@ -11,11 +11,7 @@ import java.time.LocalDate;
 //Static List of todos => Database(H2, MySQL)
 @Entity
 public class Todo {
-    //    id
-//    username
-//    description
-//    targetDate
-//    done
+
 
     @Id
     @GeneratedValue
