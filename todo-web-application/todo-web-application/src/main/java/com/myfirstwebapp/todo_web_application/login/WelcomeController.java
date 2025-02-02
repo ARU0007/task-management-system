@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @Controller
 @SessionAttributes("name")
 public class WelcomeController {
-
+// No need now
 //    public LoginController(AuthenticationService authenticationService) {
 //        super();
 //        this.authenticationService = authenticationService;
