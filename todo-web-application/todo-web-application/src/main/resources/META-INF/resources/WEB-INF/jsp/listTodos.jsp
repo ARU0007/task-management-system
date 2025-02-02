@@ -1,12 +1,9 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
-<html>
-<head>
-    <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-
-    <title>List Todos Page</title>
-</head>
+<%@include file="comman/header.jspf"%>
 <body>
+
+<%--jsp fregment--%>
+<%@include file="comman/navigation.jspf"%>
+
 <div class="container">
     <hr>
     <h1>Your Todos are</h1>
