@@ -4,7 +4,7 @@
 
 <div class="container">
     <hr>
-    <h1>Your Todos are</h1>
+    <h1>Your Tasks are</h1>
     <table class="table">
         <thead>
         <tr>
